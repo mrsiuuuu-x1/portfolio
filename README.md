@@ -4,9 +4,6 @@
 
 A high-performance, interactive portfolio website built to showcase my work in full-stack development and browser extensions. Designed with a **Neo-Brutalist** aesthetic, featuring complex animations, glassmorphism, and a cinematic "Vertical Curtain" background.
 
-![Portfolio Preview](https://via.placeholder.com/1200x600/0a0a0a/ffffff?text=Portfolio+Preview)
-*(You can replace this link with a real screenshot of your site later!)*
-
 ## Tech Stack
 
 * **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
