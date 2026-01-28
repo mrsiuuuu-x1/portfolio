@@ -1,12 +1,12 @@
 import SpotLight from "@/components/SpotLight";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <main className="bg-[#0a0a0a]">
       
-      {/* --- HERO SECTION START --- */}
-      {/* Fixed the typo: added space in 'min-h-screen flex' */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         
         <SpotLight />
@@ -19,7 +19,6 @@ export default function Home() {
           
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6">
             Crafting code with <br />
-            {/* Switched to standard 'bg-gradient-to-r' just to be safe */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600 font-serif italic pr-2">
               Soul.
             </span>
@@ -48,13 +47,10 @@ export default function Home() {
         </div>
 
       </section>
-      {/* --- HERO SECTION END --- */}
 
-
-      {/* --- PROJECTS SECTION START --- */}
-      {/* This was missing in your code! */}
       <Projects />
-      {/* --- PROJECTS SECTION END --- */}
+
+      <Contact />
 
     </main>
   );
