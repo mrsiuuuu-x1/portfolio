@@ -53,7 +53,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-[#0a0a0a] px-6 py-20 flex flex-col items-center">
+    <section id="projects" className="min-h-screen px-6 py-20 flex flex-col items-center">
       
       <FadeIn>
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter">
