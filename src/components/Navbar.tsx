@@ -17,10 +17,13 @@ export default function Navbar() {
           <Link href="#" className="hover:text-white transition-colors">About</Link>
           <Link href="#" className="hover:text-white transition-colors">Notes</Link>
         </div>
-        
-        <button className="px-4 py-2 text-xs font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-colors cursor-pointer">
+
+        <Link 
+          href="#contact" 
+          className="px-4 py-2 text-xs font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-colors cursor-pointer"
+        >
           Let&apos;s Talk
-        </button>
+        </Link>
       </div>
     </nav>
   );
