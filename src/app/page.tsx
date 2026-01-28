@@ -1,6 +1,7 @@
 import SpotLight from "@/components/SpotLight";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,9 +30,12 @@ export default function Home() {
             and interactive web apps.
           </p>
 
-          <button className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform cursor-pointer shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+          <Link
+            href="#projects"
+            className="inline-block px-8 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform cursor-pointer shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          >
             View Projects
-          </button>
+          </Link>
         
         </div>
 

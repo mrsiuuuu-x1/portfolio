@@ -8,6 +8,7 @@ export default function Projects() {
       tags: ["TypeScript", "API", "Game"],
       color: "bg-red-500",
       size: "col-span-12 md:col-span-8",
+      link: "https://github.com/mrsiuuuu-x1/git-battle"
     },
     {
       title: "Feels_FM",
@@ -15,6 +16,7 @@ export default function Projects() {
       tags: ["React", "Tailwind", "Audio"],
       color: "bg-blue-500",
       size: "col-span-12 md:col-span-4",
+      link: "https://github.com/mrsiuuuu-x1/FeelsFM"
     },
     {
       title: "Tabagotchi",
@@ -22,6 +24,7 @@ export default function Projects() {
       tags: ["JavaScript", "Extension", "Utility"],
       color: "bg-green-500",
       size: "col-span-12 md:col-span-4",
+      link: "https://github.com/mrsiuuuu-x1/Tabagotchi"
     },
     {
       title: "The Bard's Quill",
@@ -29,6 +32,7 @@ export default function Projects() {
       tags: ["NLP", "Chrome", "Fun"],
       color: "bg-purple-500",
       size: "col-span-12 md:col-span-8",
+      link: "https://github.com/mrsiuuuu-x1/the-bards-quill"
     },
     {
       title: "Survivetrack",
@@ -36,6 +40,7 @@ export default function Projects() {
       tags: ["AI", "Python", "Hackathon"],
       color: "bg-orange-500",
       size: "col-span-12 md:col-span-8",
+      link: "https://github.com/mrsiuuuu-x1/survivetrack-apocalypse-clean"
     },
     {
       title: "Netflix Analysis",
@@ -43,11 +48,12 @@ export default function Projects() {
       tags: ["Python", "Pandas", "Data"],
       color: "bg-pink-500",
       size: "col-span-12 md:col-span-4",
+      link: "https://github.com/mrsiuuuu-x1/Netflix_Movie_Analysis"
     },
   ];
 
   return (
-    <section className="min-h-screen bg-[#0a0a0a] px-6 py-20 flex flex-col items-center">
+    <section id="projects" className="min-h-screen bg-[#0a0a0a] px-6 py-20 flex flex-col items-center">
       
       <FadeIn>
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter">
@@ -59,35 +65,41 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index} className={project.size}>
             <FadeIn delay={index * 0.1} className="h-full">
-              
-              <div className="group relative p-8 h-full rounded-3xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors overflow-hidden">
-                
-                {/* Background Glow */}
-                <div className={`absolute top-0 right-0 w-32 h-32 ${project.color} blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity`} />
-
-                {/* Content Container */}
-                <div className="relative z-10 pr-20">
-                  <h3 className="text-3xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-gray-400 mb-6 max-w-sm">{project.desc}</p>
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <div className="group relative p-8 h-full rounded-3xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors overflow-hidden">
                   
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="px-3 py-1 text-xs font-medium uppercase tracking-wider border border-white/20 rounded-full text-gray-300 whitespace-nowrap">
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Background Glow */}
+                  <div className={`absolute top-0 right-0 w-32 h-32 ${project.color} blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity`} />
+
+                  <div className="relative z-10 pr-20">
+                    <h3 className="text-3xl font-bold mb-3">{project.title}</h3>
+                    <p className="text-gray-400 mb-6 max-w-sm">{project.desc}</p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="px-3 py-1 text-xs font-medium uppercase tracking-wider border border-white/20 rounded-full text-gray-300 whitespace-nowrap">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Arrow Icon */}
-                <div className="absolute bottom-8 right-8 p-3 rounded-full border border-white/20 group-hover:bg-white group-hover:text-black transition-all cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg>
-                </div>
+                  {/* Arrow Icon */}
+                  <div className="absolute bottom-8 right-8 p-3 rounded-full border border-white/20 group-hover:bg-white group-hover:text-black transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                  </div>
 
-              </div>
+                </div>
+              </a>
+
             </FadeIn>
           </div>
         ))}

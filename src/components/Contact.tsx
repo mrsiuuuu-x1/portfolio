@@ -13,7 +13,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative min-h-[50vh] flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+    <section id="contact" className="relative min-h-[50vh] flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
       
       {/* Bottom Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none" />
