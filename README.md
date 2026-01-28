@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abdul Rafay | Portfolio
 
-## Getting Started
+> "Crafting code with Soul."
 
-First, run the development server:
+A high-performance, interactive portfolio website built to showcase my work in full-stack development and browser extensions. Designed with a **Neo-Brutalist** aesthetic, featuring complex animations, glassmorphism, and a cinematic "Vertical Curtain" background.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Portfolio Preview](https://via.placeholder.com/1200x600/0a0a0a/ffffff?text=Portfolio+Preview)
+*(You can replace this link with a real screenshot of your site later!)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/)
+* **Language:** TypeScript
+* **Deployment:** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+* **Spotlight Cursor:** A custom hook that creates a dynamic "flashlight" effect following the user's mouse over the dark interface.
+* **Cinematic Background:** A pure CSS "Vertical Curtain" effect with complex gradients and masking to create depth.
+* **Bento Grid Layout:** A responsive, modular grid system for showcasing projects of varying importance.
+* **Glassmorphism:** High-end frosted glass effects on the Navigation bar and Holographic Contact card.
+* **Performance:** Optimized with Next.js fonts (`Playfair Display` & `Inter`) and lightweight CSS animations.
 
-To learn more about Next.js, take a look at the following resources:
+## Selected Works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This portfolio highlights my best work, including:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Git Battle:** Gamifying GitHub activity with RPG-style battles.
+* **Feels_FM:** An emotion dashboard with a Neo-Brutalist UI.
+* **Tabagotchi:** A Chrome extension that keeps your tabs healthy.
+* **The Bard's Quill:** An NLP tool transforming text into Old English.
+* **Survivetrack:** AI-powered survival mapping system.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **GitHub:** [@mrsiuuuu-x1](https://github.com/mrsiuuuu-x1)
+* **LinkedIn:** [Abdul Rafay](https://www.linkedin.com/in/abdul-rafay-104084352/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Built with ❤️ and Next.js.*
