@@ -40,7 +40,8 @@ export default function Projects() {
       tags: ["AI", "Python", "Hackathon"],
       color: "bg-orange-500",
       size: "col-span-12 md:col-span-8",
-      link: "https://github.com/mrsiuuuu-x1/survivetrack-apocalypse-clean"
+      link:
+"https://github.com/mrsiuuuu-x1/survivetrack"
     },
     {
       title: "Netflix Analysis",
