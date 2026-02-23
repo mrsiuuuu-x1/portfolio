@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ["latin"], variable:'--font-playfair'})
 
 export const metadata: Metadata = {
   title: "Abdul Rafay | Portfolio",
-  description: "Full-stack developer & UI designer",
+  description: "Full-stack developer specializing in browser extensions and interactive web apps.",
 };
 
 export default function RootLayout({
@@ -18,10 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <Navbar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
