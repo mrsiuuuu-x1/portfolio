@@ -337,11 +337,12 @@ export default function Portfolio() {
 
         {/* Main heading */}
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ marginBottom: 8, overflow: "hidden" }}>
+          <div style={{ marginBottom: 16, overflow: "hidden" }}>
             <span style={{
               fontFamily: "'Space Mono', monospace", fontSize: 11, color: "#e63946",
               letterSpacing: 4, textTransform: "uppercase",
-              opacity: loaded ? 1 : 0, transition: "opacity 0.6s ease 0.2s"
+              opacity: loaded ? 1 : 0, transition: "opacity 0.6s ease 0.2s",
+              display: "block", paddingTop: 100
             }}>Full-Stack Developer</span>
           </div>
 
