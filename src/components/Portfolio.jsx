@@ -5,48 +5,73 @@ import { useState, useEffect } from "react";
 const PROJECTS = [
   {
     id: "01",
+    title: "Null!fy",
+    tag: "Hackathon · 2026",
+    desc: "Forensic AI image detection web app. Detects AI-generated vs real images using HuggingFace ML, with Supabase auth, EXIF metadata display, and forensic reasoning popups.",
+    tech: ["Python", "FastAPI", "HuggingFace", "Supabase"],
+    color: "#e63946",
+    link: "https://github.com/mrsiuuuu-x1/nullify",
+    badge: null,
+  },
+  {
+    id: "02",
     title: "Signify",
     tag: "Hackathon · 2026",
     desc: "Real-time ASL sign language translator running entirely in the browser using MediaPipe gesture recognition.",
     tech: ["MediaPipe", "JavaScript", "Flask"],
-    color: "#e63946",
+    color: "#ff6b35",
     link: "https://github.com/mrsiuuuu-x1/Grizzly-Hacks-II",
+    badge: { icon: "🏅", label: "Honorable Mention" },
   },
   {
-    id: "02",
+    id: "03",
+    title: "DSA Visualizer",
+    tag: "Tool · JavaScript",
+    desc: "Interactive visualizations for data structures and algorithms. My most starred project — making CS concepts tangible and explorable.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    color: "#e63946",
+    link: "https://github.com/mrsiuuuu-x1/DSA-Visualization",
+    badge: { icon: "⭐", label: "Most Starred" },
+  },
+  {
+    id: "04",
     title: "Git Battle",
     tag: "Game · TypeScript",
     desc: "Gamifying GitHub activity with RPG-style battles. Your commit history becomes your arsenal.",
     tech: ["TypeScript", "API", "Game"],
     color: "#ff6b35",
     link: "https://github.com/mrsiuuuu-x1/git-battle",
+    badge: null,
   },
   {
-    id: "03",
+    id: "05",
     title: "Feels FM",
     tag: "Dashboard · React",
     desc: "An emotion-driven music dashboard wrapped in a Neo-Brutalist UI. Mood as interface.",
     tech: ["React", "Tailwind", "Audio"],
     color: "#e63946",
     link: "https://github.com/mrsiuuuu-x1/FeelsFM",
+    badge: null,
   },
   {
-    id: "04",
-    title: "Survivetrack",
-    tag: "AI · Python",
-    desc: "AI-powered survival mapping system for post-apocalyptic scenarios. Hackathon project.",
-    tech: ["AI", "Python", "Maps"],
+    id: "06",
+    title: "Tabagotchi",
+    tag: "Extension · Chrome",
+    desc: "A Chrome extension that keeps your browser tabs alive — or lets them die if you neglect them.",
+    tech: ["JavaScript", "Chrome API"],
     color: "#ff6b35",
-    link: "https://github.com/mrsiuuuu-x1/survivetrack",
+    link: "https://github.com/mrsiuuuu-x1/Tabagotchi",
+    badge: null,
   },
   {
-    id: "05",
-    title: "Netflix Analysis",
-    tag: "Data Science · Python",
-    desc: "Data science project analyzing movie duration trends using Pandas. Finding patterns in how films have changed over time.",
-    tech: ["Python", "Pandas", "Data"],
+    id: "07",
+    title: "The Bard's Quill",
+    tag: "NLP · Chrome",
+    desc: "Transforms modern text into Shakespearean Old English. Because why not speak like the Bard.",
+    tech: ["NLP", "Chrome", "JavaScript"],
     color: "#e63946",
-    link: "https://github.com/mrsiuuuu-x1/Netflix_Movie_Analysis",
+    link: "https://github.com/mrsiuuuu-x1/the-bards-quill",
+    badge: null,
   },
 ];
 
@@ -152,6 +177,20 @@ function ProjectCard({ project }) {
               fontFamily: "'Space Mono', monospace", fontSize: 10, color: "rgba(245,245,240,0.35)",
               letterSpacing: 2, textTransform: "uppercase"
             }}>{project.tag}</span>
+            {project.badge && (
+              <span title={project.badge.label} style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "'Space Mono', monospace", fontSize: 9,
+                letterSpacing: 1.5, textTransform: "uppercase",
+                color: "#f5c518",
+                border: "1px solid rgba(245,197,24,0.3)",
+                background: "rgba(245,197,24,0.07)",
+                padding: "3px 8px", borderRadius: 2,
+              }}>
+                <span style={{ fontSize: 11 }}>{project.badge.icon}</span>
+                {project.badge.label}
+              </span>
+            )}
           </div>
           <p style={{
             fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "rgba(245,245,240,0.55)",
@@ -444,7 +483,32 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }} />
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginBottom: 48 }} />
+
+        {/* View More */}
+        <a
+          href="https://github.com/mrsiuuuu-x1?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 16,
+            border: "1px solid rgba(255,255,255,0.1)", padding: "18px 32px", borderRadius: 2,
+            transition: "all 0.3s ease", background: "transparent", color: "#f5f5f0" }}
+          onMouseEnter={e => {
+            e.currentTarget.style.borderColor = "#e63946";
+            e.currentTarget.style.background = "rgba(230,57,70,0.06)";
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+            e.currentTarget.style.background = "transparent";
+          }}
+        >
+          <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, letterSpacing: 3, textTransform: "uppercase" }}>
+            View All Projects on GitHub
+          </span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" strokeWidth="2">
+            <path d="M7 17L17 7M7 7h10v10" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </a>
       </section>
 
       {/* ── ABOUT ── */}
