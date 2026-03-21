@@ -10,7 +10,7 @@ const PROJECTS = [
     desc: "Forensic AI image detection web app. Detects AI-generated vs real images using HuggingFace ML, with Supabase auth, EXIF metadata display, and forensic reasoning popups.",
     tech: ["Python", "FastAPI", "HuggingFace", "Supabase"],
     color: "#e63946",
-    link: "https://github.com/mrsiuuuu-x1/nullify",
+    link: "https://github.com/mrsiuuuu-x1/Raven-Hacks-VTL",
     badge: null,
   },
   {
@@ -159,13 +159,11 @@ function ProjectCard({ project }) {
       }} />
 
       <div style={{ display: "flex", alignItems: "flex-start", gap: 24, position: "relative" }}>
-        {/* number */}
         <span style={{
           fontFamily: "'Space Mono', monospace", fontSize: 11, color: project.color,
           opacity: 0.7, minWidth: 28, paddingTop: 4, letterSpacing: 2
         }}>{project.id}</span>
 
-        {/* content */}
         <div style={{ flex: 1 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 16, marginBottom: 10, flexWrap: "wrap" }}>
             <h3 style={{
@@ -324,7 +322,7 @@ export default function Portfolio() {
         opacity: 0.03, pointerEvents: "none", zIndex: 9997, animation: "grain 0.5s steps(1) infinite"
       }} />
 
-      {/* ── NAV ── */}
+      {/* NAV */}
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         padding: "24px 48px",
@@ -350,7 +348,7 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section style={{
         minHeight: "100vh", display: "flex", flexDirection: "column",
         justifyContent: "flex-end", padding: "0 48px 80px",
@@ -446,7 +444,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── MARQUEE ── */}
+      {/* MARQUEE */}
       <div style={{
         borderTop: "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
@@ -465,7 +463,7 @@ export default function Portfolio() {
         </div>
       </div>
 
-      {/* ── WORK ── */}
+      {/* WORK */}
       <section id="work" style={{ padding: "120px 48px" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 24, marginBottom: 80 }}>
           <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: "#e63946", letterSpacing: 3 }}>
@@ -511,7 +509,7 @@ export default function Portfolio() {
         </a>
       </section>
 
-      {/* ── ABOUT ── */}
+      {/* ABOUT */}
       <section id="about" style={{
         padding: "120px 48px",
         borderTop: "1px solid rgba(255,255,255,0.05)",
@@ -583,7 +581,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── CONTACT ── */}
+      {/* CONTACT */}
       <section id="contact" style={{
         padding: "120px 48px",
         borderTop: "1px solid rgba(255,255,255,0.05)",
@@ -628,7 +626,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
+      {/* FOOTER */}
       <footer style={{
         borderTop: "1px solid rgba(255,255,255,0.05)",
         padding: "24px 48px",
