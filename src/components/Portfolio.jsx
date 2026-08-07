@@ -5,16 +5,6 @@ import { useState, useEffect } from "react";
 const PROJECTS = [
   {
     id: "01",
-    title: "Null!fy",
-    tag: "Hackathon · 2026",
-    desc: "Forensic AI image detection web app. Detects AI-generated vs real images using HuggingFace ML, with Supabase auth, EXIF metadata display, and forensic reasoning popups.",
-    tech: ["Python", "FastAPI", "HuggingFace", "Supabase"],
-    color: "#e63946",
-    link: "https://github.com/mrsiuuuu-x1/Raven-Hacks-VTL",
-    badge: null,
-  },
-  {
-    id: "02",
     title: "Signify",
     tag: "Hackathon · 2026",
     desc: "Real-time ASL sign language translator running entirely in the browser using MediaPipe gesture recognition.",
@@ -24,7 +14,7 @@ const PROJECTS = [
     badge: { icon: "🏅", label: "Honorable Mention" },
   },
   {
-    id: "03",
+    id: "02",
     title: "DSA Visualizer",
     tag: "Tool · JavaScript",
     desc: "Interactive visualizations for data structures and algorithms. My most starred project — making CS concepts tangible and explorable.",
@@ -34,12 +24,22 @@ const PROJECTS = [
     badge: { icon: "⭐", label: "Most Starred" },
   },
   {
+    id: "03",
+    title: "Particles Simulator",
+    tag: "Simulation · Canvas",
+    desc: "A real-time particle physics sandbox built with HTML5 Canvas. Simulates gravity, collisions, and fluid dynamics with interactive engine controls.",
+    tech: ["JavaScript", "Canvas", "Physics"],
+    color: "#ff6b35",
+    link: "https://github.com/mrsiuuuu-x1/Particles-Simulator",
+    badge: null,
+  },
+  {
     id: "04",
     title: "Git Battle",
     tag: "Game · TypeScript",
     desc: "Gamifying GitHub activity with RPG-style battles. Your commit history becomes your arsenal.",
     tech: ["TypeScript", "API", "Game"],
-    color: "#ff6b35",
+    color: "#e63946",
     link: "https://github.com/mrsiuuuu-x1/git-battle",
     badge: null,
   },
@@ -49,28 +49,8 @@ const PROJECTS = [
     tag: "Dashboard · React",
     desc: "An emotion-driven music dashboard wrapped in a Neo-Brutalist UI. Mood as interface.",
     tech: ["React", "Tailwind", "Audio"],
-    color: "#e63946",
-    link: "https://github.com/mrsiuuuu-x1/FeelsFM",
-    badge: null,
-  },
-  {
-    id: "06",
-    title: "Tabagotchi",
-    tag: "Extension · Chrome",
-    desc: "A Chrome extension that keeps your browser tabs alive — or lets them die if you neglect them.",
-    tech: ["JavaScript", "Chrome API"],
     color: "#ff6b35",
-    link: "https://github.com/mrsiuuuu-x1/Tabagotchi",
-    badge: null,
-  },
-  {
-    id: "07",
-    title: "The Bard's Quill",
-    tag: "NLP · Chrome",
-    desc: "Transforms modern text into Shakespearean Old English. Because why not speak like the Bard.",
-    tech: ["NLP", "Chrome", "JavaScript"],
-    color: "#e63946",
-    link: "https://github.com/mrsiuuuu-x1/the-bards-quill",
+    link: "https://github.com/mrsiuuuu-x1/FeelsFM",
     badge: null,
   },
 ];
@@ -235,7 +215,6 @@ export default function Portfolio() {
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
   };
 
   return (
@@ -476,8 +455,8 @@ export default function Portfolio() {
         </div>
 
         <div style={{ maxWidth: 900 }}>
-          {PROJECTS.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
@@ -562,7 +541,7 @@ export default function Portfolio() {
             {/* Stats */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 60 }}>
               {[
-                { num: "6+", label: "Projects Shipped" },
+                { num: "5+", label: "Projects Shipped" },
                 { num: "2", label: "Hackathons" },
                 { num: "15+", label: "Commits on Signify" },
                 { num: "∞", label: "Ideas in Queue" },
